@@ -1,0 +1,262 @@
+*{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+body {
+  height: 100vh;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+span, p, h4, h6,
+input[type=checkbox],
+label {
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background: rgba(0,0,0,0.3);
+}
+
+.clockbox {
+  position: absolute;
+  top: 35vh;
+  left: 38vw;
+  font-size: 4.5em;
+}
+
+.clock-btn-box {
+  height: 5vh;
+  width: 23vw;
+  position: absolute;
+  top: 30vh;
+  left: 38.1vw;
+  display: flex;
+}
+
+.standard-clock-btn {
+  flex: 1;
+  border-bottom: 1px solid #fff;
+  opacity: 0.5;
+}
+
+.standard-clock-btn:hover {
+  opacity: 1;
+}
+
+.military-clock-btn {
+  flex: 1;
+  border-bottom: 1px solid #fff;
+  opacity: 0.5;
+}
+
+.military-clock-btn:hover {
+  opacity: 1;
+}
+
+
+.standard-clockbox {
+/*   border: 1px solid #fff; */
+}
+
+.military-clockbox {
+/*   border: 1px solid chartreuse; */
+}
+
+.weather {
+  width: 40vw;
+  position: absolute;
+  top: 2vh;
+  right: -10vw;
+  text-align: center;
+/*   background: rgba(0,0,0,0.5); */
+  border-radius: 20px;
+  font-size: 1.1em;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-section {
+  margin: 0.5vw;
+}
+
+.weather-icon {
+  min-height: 70px;
+  min-width: 70px;
+  margin-right: 1vw;
+}
+
+.weather-icon img {
+  min-height: 100%;
+}
+
+.compass {
+  position: relative;
+  top: 6vh;
+  right: 0;
+  height: 100px;
+  width: 100px;
+}
+
+.fa-location-arrow {
+  position: absolute;
+  bottom: 7.5vh;
+  right: 1.4vw;
+  font-size: 3.5em;
+}
+
+.n-s {
+  outline: 1px solid #fff;
+  transform: rotate(90deg);
+}
+
+.e-w {
+  outline: 1px solid #fff;
+}
+
+.ne-sw {
+  outline: 1px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.se-nw {
+  outline: 1px solid #fff;
+  transform: rotate(45deg);
+}
+
+.quotes {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 50vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 10vh;
+}
+
+.quote-body {
+  padding: 20px;
+}
+
+.quote-body:hover {
+  margin-bottom: -1.45vh;
+}
+.quote-body:before{
+  content: "\201C";
+}
+
+.quote-body:after {
+  content: "\201D";
+}
+
+.quote-author {
+  border-top: 1px solid #fff;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.todo-outer,
+.todo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-flow: column;
+}
+
+.todo-form {
+  display: flex;
+  border-top: 1px solid #49c3f2
+}
+
+.todo-form>input {
+  background: none;
+  border: none;
+  text-align: center;
+  color: #fff;
+  padding: 1vh;
+}
+
+.new-todo-desc:focus {
+  outline: none;
+}
+
+.new-todo-btn {
+  flex: 1;
+}
+
+.todo-list {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+}
+
+.todo-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid gold;
+  padding: 1vh;
+}
+
+.todo-list-item:hover {
+  background: #ffd7004a;
+}
+
+.collapse-todo {
+  z-index: 1;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 13.4vw;
+}
+
+.task-counter, 
+.greeting {
+  text-align: center;
+}
+
+input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
+
+.chbx-span {
+  height: 2vh;
+  width: 1vw;
+  background: transparent;
+  border: 1px solid gold;
+  display: block;
+  position: relative;
+  top: 1vh;
+  border-radius: 50%;
+}
+
+.chbx-label input[type=checkbox]:checked ~ .chbx-span {
+  background-color: gold;
+}
+
+.fa-chevron-right {
+  position: absolute;
+  bottom: 2vh;
+  left: 49vw;
+  font-size: 3em;
+}
